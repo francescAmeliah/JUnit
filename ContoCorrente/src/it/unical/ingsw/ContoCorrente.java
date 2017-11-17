@@ -1,23 +1,23 @@
 package it.unical.ingsw;
 
-public class ContoConrrente {
+public class ContoCorrente {
 
 	private int saldo;
 
-	public ContoConrrente() {
+	public ContoCorrente() {
 		this.saldo = 0;
 	}
 
 	public void deposita(int deposito) {
 		if(deposito > 0){
-			this.saldo += saldo;
+			this.saldo += deposito;
 		}
 		else
 			throw new IllegalArgumentException("L'importo che vuoi depositare è negativo, NON PUOI FARLO!");
 	}
 	
 	public void preleva(int prelievo){
-		if(prelievo <= this.saldo){
+		if(prelievo <= this.saldo && prelievo >= 0){
 			this.saldo -= prelievo;
 		}
 		else{
